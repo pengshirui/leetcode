@@ -12,12 +12,10 @@ public class Main {
         out (i);
         int[] a = {};
         Arrays.sort(a);
+
     }
 
     private static void out(Object o) {
         System.out.println(o);
     }
-
-
-
 }
