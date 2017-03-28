@@ -1,7 +1,6 @@
 package easy;
 
 import common.TreeNode;
-import sun.reflect.generics.tree.Tree;
 
 // https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 public class LowestCommonAncestor {

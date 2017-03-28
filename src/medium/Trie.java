@@ -27,11 +27,11 @@ public class Trie {
     public boolean search(String word) {
         char[] charArr = word.toCharArray();
         TrieNode cur = root;
-        for (int i = 0; i < charArr.length; i++) {
-            if (cur.children[charArr[i] - 'a'] == null) {
+        for (char aCharArr : charArr) {
+            if (cur.children[aCharArr - 'a'] == null) {
                 return false;
             }
-            cur = cur.children[charArr[i] - 'a'];
+            cur = cur.children[aCharArr - 'a'];
         }
         return cur.isWord;
     }
@@ -41,11 +41,11 @@ public class Trie {
     public boolean startsWith(String prefix) {
         char[] charArr = prefix.toCharArray();
         TrieNode cur = root;
-        for (int i = 0; i < charArr.length; i++) {
-            if (cur.children[charArr[i] - 'a'] == null) {
+        for (char aCharArr : charArr) {
+            if (cur.children[aCharArr - 'a'] == null) {
                 return false;
             }
-            cur = cur.children[charArr[i] - 'a'];
+            cur = cur.children[aCharArr - 'a'];
         }
         return true;
     }
@@ -53,11 +53,11 @@ public class Trie {
     private TrieNode treeWalk(String s) {
         char[] charArr = s.toCharArray();
         TrieNode cur = root;
-        for (int i = 0; i < charArr.length; i++) {
-            if (cur.children[charArr[i] - 'a'] == null) {
-                cur.children[charArr[i] - 'a'] = new TrieNode();
+        for (char aCharArr : charArr) {
+            if (cur.children[aCharArr - 'a'] == null) {
+                cur.children[aCharArr - 'a'] = new TrieNode();
             }
-            cur = cur.children[charArr[i] - 'a'];
+            cur = cur.children[aCharArr - 'a'];
         }
         return cur;
     }
