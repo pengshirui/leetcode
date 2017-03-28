@@ -1,4 +1,4 @@
-package test;
+package easy;
 
 import common.TreeNode;
 import easy.LowestCommonAncestor;
