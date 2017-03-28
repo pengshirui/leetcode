@@ -1,36 +1,38 @@
-package basics;
+package basic;
 
-/**
- * Created by yizhu on 1/15/17.
- */
 public class Sort {
+  /**
+   * quick sort.
+   * @param array array
+   * @param low left pointer
+   * @param high right pointer
+   */
+  public void quickSort(int[] array, int low, int high) {
+    if (low < high) {
+      int pivot = partition(array, low, high);
+      quickSort(array, low, pivot - 1);
+      quickSort(array, pivot + 1, high);
+    }
+  }
 
-    public void quickSort(int[] A, int low, int high){
-        if(low < high){
-            int pivot = partition(A, low, high);
-            quickSort(A,low, pivot-1);
-            quickSort(A, pivot + 1, high);
+  private int partition(int[] arr, int low, int high) {
+    if (low < high) {
+      int i = low - 1;
+      for (int j = low; j < high; j++) {
+        if (arr[j] <= arr[high]) {
+          i++;
+          swap(arr, i, j);
         }
+      }
+      swap(arr, i + 1, high);
+      return i + 1;
     }
+    return low;
+  }
 
-    int partition(int[] A, int low, int high){
-        if(low < high){
-            int i = low -1;
-            for(int j=low; j< high; j++){
-                if(A[j] <= A[high]){
-                    i++;
-                    swap(A,i,j);
-                }
-            }
-            swap(A,i+1,high);
-            return i + 1;
-        }
-        return low;
-    }
-
-    void swap(int[] A, int i, int j){
-        int temp = A[i];
-        A[i] = A[j];
-        A[j] = temp;
-    }
+  private void swap(int[] arr, int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
 }

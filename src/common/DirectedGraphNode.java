@@ -3,11 +3,11 @@ package common;
 import java.util.ArrayList;
 
 public class DirectedGraphNode {
-    int label;
-    public ArrayList<DirectedGraphNode> neighbors;
+  int label;
+  public ArrayList<DirectedGraphNode> neighbors;
 
-    DirectedGraphNode(int x) {
-        label = x;
-        neighbors = new ArrayList<DirectedGraphNode>();
-    }
+  DirectedGraphNode(int x) {
+    label = x;
+    neighbors = new ArrayList<DirectedGraphNode>();
+  }
 }

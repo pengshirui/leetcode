@@ -15,25 +15,25 @@ public class InvertTree {
     }
     */
 
-    // DFS
-    public TreeNode invertTree(TreeNode root) {
-        if (root == null) return root;
-        ArrayDeque<TreeNode> arrayDeque = new ArrayDeque<>();
-        arrayDeque.push(root);
-        while (!arrayDeque.isEmpty()) {
-            TreeNode cur = arrayDeque.pop();
-            TreeNode tmp = cur.left;
-            cur.left = cur.right;
-            cur.right = tmp;
+  // DFS
+  public TreeNode invertTree(TreeNode root) {
+    if (root == null) return root;
+    ArrayDeque<TreeNode> arrayDeque = new ArrayDeque<>();
+    arrayDeque.push(root);
+    while (!arrayDeque.isEmpty()) {
+      TreeNode cur = arrayDeque.pop();
+      TreeNode tmp = cur.left;
+      cur.left = cur.right;
+      cur.right = tmp;
 
-            if (cur.left != null) {
-                arrayDeque.push(cur.left);
-            }
-            if (cur.right != null) {
-                arrayDeque.push(cur.right);
-            }
-        }
-        return root;
+      if (cur.left != null) {
+        arrayDeque.push(cur.left);
+      }
+      if (cur.right != null) {
+        arrayDeque.push(cur.right);
+      }
     }
+    return root;
+  }
 
 }
