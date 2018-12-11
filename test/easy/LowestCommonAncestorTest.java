@@ -1,9 +1,9 @@
 package easy;
 
+
 import common.TreeNode;
-import easy.LowestCommonAncestor;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class LowestCommonAncestorTest {
 
@@ -11,6 +11,6 @@ public class LowestCommonAncestorTest {
   public void testNull() {
     LowestCommonAncestor lowestCommonAncestor = new LowestCommonAncestor();
     TreeNode treeNode = lowestCommonAncestor.lowestCommonAncestor(null, null, null);
-    Assert.assertNull(treeNode);
+    Assertions.assertNull(treeNode);
   }
 }

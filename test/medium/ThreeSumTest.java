@@ -1,13 +1,14 @@
 package medium;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 public class ThreeSumTest {
 
     @Test
     public void testNull() {
         ThreeSum threeSum = new ThreeSum();
-        Assert.assertNotNull(threeSum.threeSum(null));
+        Assertions.assertNotNull(threeSum.threeSum(null));
     }
 }

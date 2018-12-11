@@ -23,6 +23,7 @@ public class NumIslands {
     }
 
     private void dfs(char[][] grid, int i, int j){
+        // mark visited point to 0
         grid[i][j] = 0;
         //check left
         if (j-1>= 0 && grid[i][j-1] == '1'){
