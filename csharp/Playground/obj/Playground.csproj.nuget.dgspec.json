@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\repos\\CSharpLeetCode\\Playground\\Playground.csproj": {}
+    "E:\\repos\\leetcode\\csharp\\Playground\\Playground.csproj": {}
   },
   "projects": {
-    "E:\\repos\\CSharpLeetCode\\Playground\\Playground.csproj": {
+    "E:\\repos\\leetcode\\csharp\\Playground\\Playground.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\repos\\CSharpLeetCode\\Playground\\Playground.csproj",
+        "projectUniqueName": "E:\\repos\\leetcode\\csharp\\Playground\\Playground.csproj",
         "projectName": "Playground",
-        "projectPath": "E:\\repos\\CSharpLeetCode\\Playground\\Playground.csproj",
+        "projectPath": "E:\\repos\\leetcode\\csharp\\Playground\\Playground.csproj",
         "packagesPath": "C:\\Users\\Peng\\.nuget\\packages\\",
-        "outputPath": "E:\\repos\\CSharpLeetCode\\Playground\\obj\\",
+        "outputPath": "E:\\repos\\leetcode\\csharp\\Playground\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

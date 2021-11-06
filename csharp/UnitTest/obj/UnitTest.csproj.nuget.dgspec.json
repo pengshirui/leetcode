@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\repos\\CSharpLeetCode\\UnitTest\\UnitTest.csproj": {}
+    "E:\\repos\\leetcode\\csharp\\UnitTest\\UnitTest.csproj": {}
   },
   "projects": {
-    "E:\\repos\\CSharpLeetCode\\LeetCode\\LeetCode.csproj": {
+    "E:\\repos\\leetcode\\csharp\\LeetCode\\LeetCode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\repos\\CSharpLeetCode\\LeetCode\\LeetCode.csproj",
+        "projectUniqueName": "E:\\repos\\leetcode\\csharp\\LeetCode\\LeetCode.csproj",
         "projectName": "LeetCode",
-        "projectPath": "E:\\repos\\CSharpLeetCode\\LeetCode\\LeetCode.csproj",
+        "projectPath": "E:\\repos\\leetcode\\csharp\\LeetCode\\LeetCode.csproj",
         "packagesPath": "C:\\Users\\Peng\\.nuget\\packages\\",
-        "outputPath": "E:\\repos\\CSharpLeetCode\\LeetCode\\obj\\",
+        "outputPath": "E:\\repos\\leetcode\\csharp\\LeetCode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,18 +60,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\repos\\CSharpLeetCode\\UnitTest\\UnitTest.csproj": {
+    "E:\\repos\\leetcode\\csharp\\UnitTest\\UnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\repos\\CSharpLeetCode\\UnitTest\\UnitTest.csproj",
+        "projectUniqueName": "E:\\repos\\leetcode\\csharp\\UnitTest\\UnitTest.csproj",
         "projectName": "UnitTest",
-        "projectPath": "E:\\repos\\CSharpLeetCode\\UnitTest\\UnitTest.csproj",
+        "projectPath": "E:\\repos\\leetcode\\csharp\\UnitTest\\UnitTest.csproj",
         "packagesPath": "C:\\Users\\Peng\\.nuget\\packages\\",
-        "outputPath": "E:\\repos\\CSharpLeetCode\\UnitTest\\obj\\",
+        "outputPath": "E:\\repos\\leetcode\\csharp\\UnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -88,8 +88,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\repos\\CSharpLeetCode\\LeetCode\\LeetCode.csproj": {
-                "projectPath": "E:\\repos\\CSharpLeetCode\\LeetCode\\LeetCode.csproj"
+              "E:\\repos\\leetcode\\csharp\\LeetCode\\LeetCode.csproj": {
+                "projectPath": "E:\\repos\\leetcode\\csharp\\LeetCode\\LeetCode.csproj"
               }
             }
           }
@@ -142,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
