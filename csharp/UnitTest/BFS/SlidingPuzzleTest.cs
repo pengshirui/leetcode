@@ -1,7 +1,7 @@
-﻿namespace UnitTest.Hard
+﻿namespace UnitTest.BFS
 {
     using FluentAssertions;
-    using LeetCode.Hard.SlidingPuzzle;
+    using LeetCode.BFS.SlidingPuzzle;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
