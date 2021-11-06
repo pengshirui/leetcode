@@ -1,3 +1,5 @@
 bin
 obj
-csharp/.vs/LeetCode/v16/.suo
+/csharp/.vs/LeetCode/v16/.suo
+/cpp/Leetcode/.vs/Leetcode/v17
+/csharp/.vs/LeetCode/DesignTimeBuild
