@@ -8,18 +8,19 @@
     {
         static void Main(String[] args)
         {
-            var c = (long)1e8;
-            var t = new Stopwatch();
-            t.Start();
-            var a = new int[c];
-            for (var i = 0; i < c; i++)
-            {
-                a[i] = 1;
-            }
-            //Array.Fill(a, 1);
-            t.Stop();
-            Console.WriteLine(t.ElapsedMilliseconds);
+            var s = new Solution();
+            var r = s.GetResult(5);
+            Console.WriteLine(r);
         }
-
     }
+
+    class Solution
+    {
+        int N;
+        public int GetResult(int n)
+        {
+            return n;
+        }
+    }
+
 }
