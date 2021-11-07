@@ -12,7 +12,7 @@
         [TestMethod]
         public void Test1()
         {
-            Solution.MinKnightMoves(5, 5).Should().Be(4);
+            Solution.MinKnightMoves(5, 5).Should().Be(6);
         }
     }
 }

@@ -1,34 +1,33 @@
-﻿namespace LeetCode.Sort.FindKthLargest
+﻿namespace LeetCode.Sort.QuickSort
 {
     public class Solution
     {
         int[] Nums;
-        public int FindKthLargest(int[] nums, int k)
+        public void QuickSort(int[] nums)
         {
+            if (nums == null || nums.Length == 0) return;
             Nums = nums;
-            return QuickSelect(0, nums.Length - 1, nums.Length - k);
+            Sort(0, nums.Length - 1, 0);
         }
 
-        int QuickSelect(int l, int r, int k)
+        void Sort(int l, int r, int k)
         {
-            if (l == r) return Nums[k];
-
+            if (l >= r) return;
             var i = l - 1;
             var j = r + 1;
-            var m = Nums[l];
             while (i < j)
             {
                 do
                 {
                     i++;
                 }
-                while (Nums[i] < m);
+                while (Nums[i] < Nums[k]);
 
                 do
                 {
                     j--;
                 }
-                while (Nums[j] > m);
+                while (Nums[j] > Nums[k]);
 
                 if (i < j)
                 {
@@ -37,14 +36,9 @@
                     Nums[j] = t;
                 }
             }
-            if (k <= j)
-            {
-                return QuickSelect(l, j, k);
-            }
-            else
-            {
-                return QuickSelect(j + 1, r, k);
-            }
+
+            Sort(l, j, l);
+            Sort(j + 1, r, j + 1);
         }
     }
 }
