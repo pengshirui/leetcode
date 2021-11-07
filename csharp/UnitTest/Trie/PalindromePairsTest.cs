@@ -1,7 +1,7 @@
-﻿namespace UnitTest.Hard
+﻿namespace UnitTest.Trie
 {
     using FluentAssertions;
-    using LeetCode.Hard.PalindromePairs;
+    using LeetCode.Trie.PalindromePairs;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
@@ -47,6 +47,14 @@
             var num = new string[] { "abcyyyy", "cba" };
             var r = Solution.PalindromePairs(num);
             r.Should().HaveCount(1);
+        }
+
+        [TestMethod]
+        public void Test6()
+        {
+            var num = new string[] { "a", "abc", "aba", "" };
+            var r = Solution.PalindromePairs(num);
+            r.Should().HaveCount(4);
         }
     }
 }

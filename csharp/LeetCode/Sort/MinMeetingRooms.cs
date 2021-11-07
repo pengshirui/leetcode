@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Medium
+﻿namespace LeetCode.Sort.MinMeetingRooms
 {
     using System;
 

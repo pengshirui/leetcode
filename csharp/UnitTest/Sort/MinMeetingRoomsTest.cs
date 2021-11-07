@@ -1,7 +1,7 @@
-﻿namespace UnitTest.Medium
+﻿namespace UnitTest.Sort
 {
     using FluentAssertions;
-    using LeetCode.Medium;
+    using LeetCode.Sort.MinMeetingRooms;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
@@ -19,7 +19,6 @@
                 new int[] { 15, 20 },
             };
             Solution.MinMeetingRooms(g).Should().Be(2);
-
         }
 
         [TestMethod]
@@ -31,7 +30,6 @@
                 new int[] { 1,2 },
             };
             Solution.MinMeetingRooms(g).Should().Be(1);
-
         }
 
         [TestMethod]
@@ -42,7 +40,6 @@
                 new int[] { 0, 1 },
             };
             Solution.MinMeetingRooms(g).Should().Be(1);
-
         }
     }
 }
