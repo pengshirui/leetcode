@@ -1,12 +1,12 @@
 ﻿namespace UnitTest.Sort
 {
     using FluentAssertions;
-    using LeetCode.Sort.QuickSort;
+    using LeetCode.Sort.MergeSort;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
 
     [TestClass]
-    public class QuickSort
+    public class MergeSortTest
     {
         private readonly Solution Solution = new Solution();
 
@@ -14,7 +14,7 @@
         public void Test1()
         {
             int[] n = { 3, 2, 1, 5, 6, 4 };
-            Solution.QuickSort(n);
+            Solution.MergeSort(n);
             for (var i = 1; i < n.Length; i++)
             {
                 (n[i] >= n[i - 1]).Should().BeTrue();
@@ -31,7 +31,7 @@
             {
                 arr[i] = random.Next(int.MinValue, int.MaxValue);
             }
-            Solution.QuickSort(arr);
+            Solution.MergeSort(arr);
             for (var i = 1; i < n; i++)
             {
                 (arr[i] >= arr[i - 1]).Should().BeTrue();
@@ -48,7 +48,7 @@
             {
                 arr[i] = random.Next(int.MinValue, int.MaxValue);
             }
-            Solution.QuickSort(arr);
+            Solution.MergeSort(arr);
             for (var i = 1; i < n; i++)
             {
                 (arr[i] >= arr[i - 1]).Should().BeTrue();
