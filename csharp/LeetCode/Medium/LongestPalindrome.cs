@@ -7,30 +7,32 @@
         public string LongestPalindrome(string s)
         {
             var start = 0;
-            var maxLen = 0;
+            var len = 0;
+
             for (var i = 0; i < s.Length; i++)
             {
-                var l1 = ExpandAroundCenter(s, i, i);
-                var l2 = ExpandAroundCenter(s, i, i + 1);
-                var len = Math.Max(l1, l2);
-                if (len > maxLen)
+                var (l1, l2) = Max(s, i, i);
+                var (r1, r2) = Max(s, i, i + 1);
+                var max = Math.Max(l2, r2);
+                if (max > len)
                 {
-                    maxLen = len;
-                    start = i - (len - 1) / 2;
+                    len = max;
+                    start = l2 > r2 ? l1 : r1;
                 }
             }
-            return s.Substring(start, maxLen);
+            return s.Substring(start, len);
         }
 
-        int ExpandAroundCenter(string s, int l, int r)
+
+        (int, int) Max(string s, int l, int r)
         {
             while (l >= 0 && r < s.Length && s[l] == s[r])
             {
                 l--;
                 r++;
             }
-            // stop at "s[l] != s[r]" so remove the length by 1
-            return r - l - 1;
+
+            return (l + 1, r - l - 1);
         }
     }
 }

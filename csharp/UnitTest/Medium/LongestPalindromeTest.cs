@@ -38,5 +38,11 @@
         {
             Solution.LongestPalindrome("bananas").Should().Be("anana");
         }
+
+        [TestMethod]
+        public void Test6()
+        {
+            Solution.LongestPalindrome("bb").Should().Be("bb");
+        }
     }
 }
