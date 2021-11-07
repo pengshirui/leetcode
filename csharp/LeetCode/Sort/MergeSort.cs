@@ -37,7 +37,8 @@
             while (i <= m) T[k++] = Nums[i++];
             while (j <= r) T[k++] = Nums[j++];
             i = l;
-            for (var a = 0; i <= r; a++, i++)
+            var a = 0;
+            for (; i <= r; a++, i++)
             {
                 Nums[i] = T[a];
             }
