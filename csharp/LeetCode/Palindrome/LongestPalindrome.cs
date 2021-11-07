@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Medium.LongestPalindrome
+﻿namespace LeetCode.Palindrome.LongestPalindrome
 {
     using System;
 

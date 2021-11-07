@@ -1,7 +1,7 @@
-﻿namespace UnitTest.Medium
+﻿namespace UnitTest.Palindrome
 {
     using FluentAssertions;
-    using LeetCode.Medium.LongestPalindrome;
+    using LeetCode.Palindrome.LongestPalindrome;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
