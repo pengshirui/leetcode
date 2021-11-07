@@ -7,10 +7,10 @@
         {
             if (nums == null || nums.Length == 0) return;
             Nums = nums;
-            Sort(0, nums.Length - 1, 0);
+            Sort(0, nums.Length - 1);
         }
 
-        void Sort(int l, int r, int k)
+        void Sort(int l, int r)
         {
             if (l >= r) return;
             var i = l - 1;
@@ -21,13 +21,13 @@
                 {
                     i++;
                 }
-                while (Nums[i] < Nums[k]);
+                while (Nums[i] < Nums[l]);
 
                 do
                 {
                     j--;
                 }
-                while (Nums[j] > Nums[k]);
+                while (Nums[j] > Nums[l]);
 
                 if (i < j)
                 {
@@ -37,8 +37,8 @@
                 }
             }
 
-            Sort(l, j, l);
-            Sort(j + 1, r, j + 1);
+            Sort(l, j);
+            Sort(j + 1, r);
         }
     }
 }
