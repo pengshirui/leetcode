@@ -1,7 +1,7 @@
-﻿namespace UnitTest.Hard
+﻿namespace UnitTest.DFS
 {
     using FluentAssertions;
-    using LeetCode.Hard.SolveNQueens;
+    using LeetCode.DFS.SolveNQueens;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
