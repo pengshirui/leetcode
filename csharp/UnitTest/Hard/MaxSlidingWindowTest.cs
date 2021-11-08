@@ -16,5 +16,13 @@
             var t = 3;
             Solution.MaxSlidingWindow(l, t).Should().Equal(3, 3, 5, 5, 6, 7);
         }
+
+        [TestMethod]
+        public void Test2()
+        {
+            var l = new int[] { 1, -1 };
+            var t = 1;
+            Solution.MaxSlidingWindow(l, t).Should().Equal(1, -1);
+        }
     }
 }

@@ -5,30 +5,31 @@
 
     public class Solution
     {
+        int[] win;
+        List<int> res = new List<int>();
         public int[] MaxSlidingWindow(int[] nums, int k)
         {
-            var result = new List<int>();
-            var link = new LinkedList<int>();
-            for (var i = 0; i <= nums.Length; i++)
+            win = new int[nums.Length];
+            var hh = 0;
+            var tt = -1;
+            for (var i = 0; i < nums.Length; i++)
             {
-                while (link.Any() && link.First.Value + k < i)
+                var n = nums[i];
+                if (hh <= tt && i - win[hh] >= k)
                 {
-                    link.RemoveFirst();
+                    hh++;
                 }
-                if (i >= k)
+                while (hh <= tt && nums[win[tt]] < n)
                 {
-                    result.Add(nums[link.First.Value]);
+                    tt--;
                 }
-                if (i == nums.Length) break;
-
-                var num = nums[i];
-                while (link.Any() && nums[link.Last.Value] < num)
+                win[++tt] = i;
+                if (i >= k - 1)
                 {
-                    link.RemoveLast();
+                    res.Add(nums[win[hh]]);
                 }
-                link.AddLast(i);
             }
-            return result.ToArray();
+            return res.ToArray();
         }
     }
 }
