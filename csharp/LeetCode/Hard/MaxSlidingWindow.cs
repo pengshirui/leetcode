@@ -1,17 +1,14 @@
 ﻿namespace LeetCode.Hard.MaxSlidingWindow
 {
-    using System.Collections.Generic;
-    using System.Linq;
-
     public class Solution
     {
-        int[] win;
-        List<int> res = new List<int>();
         public int[] MaxSlidingWindow(int[] nums, int k)
         {
-            win = new int[nums.Length];
+            var win = new int[nums.Length];
+            var res = new int[nums.Length - k + 1];
             var hh = 0;
             var tt = -1;
+            var j = 0;
             for (var i = 0; i < nums.Length; i++)
             {
                 var n = nums[i];
@@ -26,10 +23,10 @@
                 win[++tt] = i;
                 if (i >= k - 1)
                 {
-                    res.Add(nums[win[hh]]);
+                    res[j++] = nums[win[hh]];
                 }
             }
-            return res.ToArray();
+            return res;
         }
     }
 }
