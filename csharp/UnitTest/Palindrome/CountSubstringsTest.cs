@@ -15,7 +15,6 @@
             Solution.CountSubstrings("aaa").Should().Be(6);
         }
 
-
         [TestMethod]
         public void Test2()
         {
