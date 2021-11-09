@@ -1,33 +1,35 @@
-﻿namespace LeetCode.Medium
+﻿namespace LeetCode.Medium.Merge
 {
     using System;
     using System.Collections.Generic;
 
-    public partial class Solution
+    public class Solution
     {
         public int[][] Merge(int[][] intervals)
         {
             Array.Sort(intervals, (x, y) => x[0].CompareTo(y[0]));
-            var ans = new List<int[]>();
+
+            var res = new List<int[]>();
             var start = intervals[0][0];
             var end = intervals[0][1];
             for (var i = 0; i < intervals.Length; i++)
             {
-                var first = intervals[i][0];
-                var second = intervals[i][1];
-                if (first <= end)
+                var a = intervals[i][0];
+                var b = intervals[i][1];
+                if (a <= end)
                 {
-                    end = Math.Max(second, end);
+                    end = Math.Max(end, b);
                 }
-                else if (first > end)
+                else
                 {
-                    ans.Add(new int[] { start, end });
-                    start = first;
-                    end = second;
+                    res.Add(new int[] { start, end });
+                    start = a;
+                    end = b;
                 }
             }
-            ans.Add(new int[] { start, end });
-            return ans.ToArray();
+
+            res.Add(new int[] { start, end });
+            return res.ToArray();
         }
     }
 }

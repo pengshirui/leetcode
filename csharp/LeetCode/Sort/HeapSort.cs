@@ -36,7 +36,11 @@
 
         public int Pop()
         {
-            return Remove(1);
+            var min = heap[1];
+            Swap(1, count - 1);
+            count--;
+            Down(1);
+            return min;
         }
 
         public int Remove(int i)

@@ -1,7 +1,7 @@
 ﻿namespace UnitTest.Medium
 {
     using FluentAssertions;
-    using LeetCode.Medium;
+    using LeetCode.Medium.Merge;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
