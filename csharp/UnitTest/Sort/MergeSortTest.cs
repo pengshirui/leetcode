@@ -42,7 +42,7 @@
         public void Test3()
         {
             var random = new Random();
-            var n = (int)1e5;
+            var n = (int)1e6;
             var arr = new int[n];
             for (var i = 0; i < n; i++)
             {
