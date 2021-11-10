@@ -1,4 +1,4 @@
-﻿namespace UnitTest.BFS
+﻿namespace UnitTest.DP
 {
     using FluentAssertions;
     using LeetCode.DP.MinKnightMoves;
