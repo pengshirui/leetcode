@@ -1,8 +1,6 @@
-﻿namespace LeetCode.Easy.BinarySearch
+﻿namespace LeetCode.BinarySearch.BinarySearch
 {
-    using System;
     using System.Collections.Generic;
-    using System.Text;
 
     public class Solution
     {
@@ -12,26 +10,19 @@
         {
             var l = 0;
             var r = list.Count - 1;
-            while (l + 1 < r)
+            while (l < r)
             {
-                var m = (l + r) / 2;
-                if (list[m] > k)
-                {
-                    r = m - 1;
-                }
-                else if (list[m] < k)
+                var m = l + r  + 1 >> 1;
+                if (list[m] < k)
                 {
                     l = m;
                 }
                 else
                 {
-                    r = m;
+                    r = m - 1;
                 }
             }
-            if (k < list[l]) return -1;
-            if (k == list[l]) return l;
-            if (k < list[r]) return l;
-            return r;
+            return l;
         }
 
         // [1, 2, 4] -> 3 
@@ -40,15 +31,10 @@
         {
             var l = 0;
             var r = list.Count - 1;
-            while (l <= r)
+            while (l < r)
             {
-                var m = (l + r) / 2;
-                var middle = list[m];
-                if (middle == k)
-                {
-                    return m;
-                }
-                else if (middle < k)
+                var m = l + r >> 1;
+                if (list[m] < k)
                 {
                     l = m + 1;
                 }

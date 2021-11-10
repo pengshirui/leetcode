@@ -1,7 +1,7 @@
 ﻿namespace UnitTest.Easy
 {
     using FluentAssertions;
-    using LeetCode.Easy.BinarySearch;
+    using LeetCode.BinarySearch.BinarySearch;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
@@ -30,7 +30,7 @@
         {
             var l = new int[] { 1, 2, 3 };
             var t = 3;
-            Solution.LowerBound(l, t).Should().Be(2);
+            Solution.LowerBound(l, t).Should().Be(1);
         }
 
         [TestMethod]
@@ -38,7 +38,7 @@
         {
             var l = new int[] { 1, 2, 3, 3 };
             var t = 3;
-            Solution.LowerBound(l, t).Should().Be(2);
+            Solution.LowerBound(l, t).Should().Be(1);
         }
 
         [TestMethod]
