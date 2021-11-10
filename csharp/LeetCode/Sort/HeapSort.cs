@@ -5,7 +5,7 @@
     public class Solution
     {
         int[] heap;
-        int count = 1;
+        int count = 0;
         public void HeapSort(int[] nums)
         {
             var n = nums.Length;

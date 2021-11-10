@@ -1,7 +1,7 @@
-﻿namespace UnitTest.Medium
+﻿namespace UnitTest.Sort
 {
     using FluentAssertions;
-    using LeetCode.Medium.Merge;
+    using LeetCode.Sort.Merge;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]

@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Medium.Merge
+﻿namespace LeetCode.Sort.Merge
 {
     using System;
     using System.Collections.Generic;
