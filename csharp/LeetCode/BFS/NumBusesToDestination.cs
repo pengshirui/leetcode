@@ -37,7 +37,7 @@
                     {
                         return res;
                     }
-                    Add(routes, stop);
+                    Transfer(routes, stop);
                 }
                 res++;
             }
@@ -45,7 +45,7 @@
             return -1;
         }
 
-        void Add(int[][] routes, int stop)
+        void Transfer(int[][] routes, int stop)
         {
             foreach (var bus in kv[stop])
             {

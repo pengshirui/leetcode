@@ -1,16 +1,18 @@
 ﻿namespace Playground
 {
     using System;
+    using System.Collections.Generic;
     using System.Diagnostics;
-    using System.Text;
+    using System.Linq;
 
     class Program
     {
         static void Main(String[] args)
         {
-            var s = new Solution();
-            var r = s.GetResult(5);
-            Console.WriteLine(r);
+            var dict = new Dictionary<int, int>();
+            foreach (var (k, v) in dict.OrderByDescending(d => d.Value))
+            {
+            }
         }
     }
 
