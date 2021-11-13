@@ -3,12 +3,13 @@
     public class Solution
     {
         int[] q;
+        int[] res;
         int hh = 0;
         int tt = -1;
         public int[] DailyTemperatures(params int[] temperatures)
         {
-            var res = new int[temperatures.Length];
-            var q = new int[temperatures.Length + 10];
+            res = new int[temperatures.Length];
+            q = new int[temperatures.Length + 10];
             for (var i = res.Length - 1; i >= 0; i--)
             {
                 var j = 0;
