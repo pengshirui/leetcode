@@ -5,38 +5,31 @@
 
     public class Solution
     {
-        int[,] f;
+        int m, n;
+        int[] f;
+        (int, int, int)[] jobs;
         public int JobScheduling(int[] startTime, int[] endTime, int[] profit)
         {
-            int m = startTime.Length;
-            int n = endTime.Max();
-
-            (int, int, int)[] lists = new (int, int, int)[m];
+            m = startTime.Length;
+            n = endTime.Max();
+            f = new int[n + 1];
+            jobs = new (int, int, int)[m];
             for (var i = 0; i < m; i++)
             {
-                lists[i] = (startTime[i], endTime[i], profit[i]);
+                jobs[i] = (startTime[i], endTime[i], profit[i]);
             }
 
-            Array.Sort(lists);
-
-            f = new int[m + 1, n + 1];
+            Array.Sort(jobs);
 
             for (var i = 1; i <= m; i++)
             {
-                var start = lists[i - 1].Item1;
-                var end = lists[i - 1].Item2;
-                var p = lists[i - 1].Item3;
-                for (var j = 1; j <= n; j++)
+                var (st, ed, pf) = jobs[i - 1];
+                for (var j = n; j >= ed; j--)
                 {
-                    f[i, j] = Math.Max(f[i, j], f[i - 1, j]);
-                    if (end <= j)
-                    {
-                        f[i, j] = Math.Max(f[i, j], p + f[i - 1, start]);
-                    }
+                    f[j] = Math.Max(f[j], f[st] + pf);
                 }
             }
-
-            return f[m, n];
+            return f[n];
         }
     }
 }
