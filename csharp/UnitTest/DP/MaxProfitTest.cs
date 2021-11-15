@@ -1,7 +1,7 @@
-﻿namespace UnitTest.Hard
+﻿namespace UnitTest.DP
 {
     using FluentAssertions;
-    using LeetCode.Hard.MaxProfit;
+    using LeetCode.DP.MaxProfit;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
