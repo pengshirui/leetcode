@@ -50,11 +50,11 @@
 
         int Find(int x)
         {
-            while (x != p[x])
+            if (x != p[x])
             {
-                x = p[x];
+                p[x] = Find(p[x]);
             }
-            return x;
+            return p[x];
         }
     }
 }
