@@ -13,7 +13,6 @@
             for (var i = 0; i < p.Length; i++) p[i] = i;
 
             var res = new int[positions.Length];
-
             var cnt = 0;
             for (var i = 0; i < positions.Length; i++)
             {
@@ -24,9 +23,9 @@
                 {
                     res[i] = cnt;
                     continue;
-                };
+                }
                 hs.Add(k);
-                var change = 1;
+                cnt++;
                 for (var d = 0; d < 4; d++)
                 {
                     var x0 = x + Dxy[d, 0];
@@ -34,20 +33,15 @@
                     var k0 = x0 * n + y0;
                     if (x0 < 0 || x0 >= m || y0 < 0 || y0 >= n) continue;
                     if (!hs.Contains(k0)) continue;
-                    var rk = Find(k);
-                    var rk0 = Find(k0);
-                    if (rk != rk0)
+                    if (Union(k, k0))
                     {
-                        p[rk] = rk0;
-                        change--;
+                        cnt--;
                     }
                 }
-                cnt += change;
                 res[i] = cnt;
             }
             return res;
         }
-
         int Find(int x)
         {
             if (x != p[x])
@@ -56,5 +50,15 @@
             }
             return p[x];
         }
+
+        bool Union(int x, int y)
+        {
+            var rx = Find(x);
+            var ry = Find(y);
+            if (rx == ry) return false;
+            p[rx] = ry;
+            return true;
+        }
+
     }
 }
