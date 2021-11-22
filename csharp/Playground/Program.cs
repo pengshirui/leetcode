@@ -4,15 +4,15 @@
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Linq;
+    using System.Text;
 
     class Program
     {
         static void Main(String[] args)
         {
-            var dict = new Dictionary<int, int>();
-            foreach (var (k, v) in dict.OrderByDescending(d => d.Value))
-            {
-            }
+            var sb = new StringBuilder();
+            var t = "abc";
+            sb.Append(t, 5, 1);
         }
     }
 
