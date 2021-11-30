@@ -19,6 +19,7 @@
             };
 
             Solution.NetworkDelayTime(graph, 2, 2).Should().Be(3);
+            Solution.NetworkDelayTime2(graph, 2, 2).Should().Be(3);
         }
 
         [TestMethod]
@@ -32,6 +33,7 @@
             };
 
             Solution.NetworkDelayTime(graph, 4, 2).Should().Be(2);
+            Solution.NetworkDelayTime2(graph, 4, 2).Should().Be(2);
         }
 
         [TestMethod]
@@ -45,6 +47,7 @@
             };
 
             Solution.NetworkDelayTime(graph, 3, 1).Should().Be(3);
+            Solution.NetworkDelayTime2(graph, 3, 1).Should().Be(3);
         }
     }
 }
