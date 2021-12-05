@@ -36,7 +36,7 @@
 
         static void Main(String[] args)
         {
-            char n = (char)'1' + t;
+            
         }
     }
 

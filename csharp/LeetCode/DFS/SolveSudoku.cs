@@ -6,7 +6,112 @@
 
     public class Solution
     {
+        const int N = 9;
+        const int M = 1 << N;
+        int[] row = new int[N];
+        int[] col = new int[N];
+        int[,] cel = new int[3, 3];
+
+        int[] slots = new int[M];
         public void SolveSudoku(char[][] board)
+        {
+            Init();
+
+            var cnt = 0;
+            for (var i = 0; i < N; i++)
+                for (var j = 0; j < N; j++)
+                {
+                    if (board[i][j] == '.') cnt++;
+                    else
+                    {
+                        var t = board[i][j] - '1';
+                        Update(board, i, j, t, true);
+                    }
+                }
+
+            DFS(board, cnt);
+        }
+
+        bool DFS(char[][] board, int cnt)
+        {
+            if (cnt == 0) return true;
+            var (x, y) = GetMinSlot(board);
+            var s = Get(x, y);
+            for (var i = s; i != 0; i -= LowBit(i))
+            {
+                var t = (int)Math.Log2(LowBit(i));
+                Update(board, x, y, t, true);
+                if (DFS(board, cnt - 1)) return true;
+                Update(board, x, y, t, false);
+            }
+            return false;
+        }
+
+        int LowBit(int x)
+        {
+            return x & -x;
+        }
+
+        (int, int) GetMinSlot(char[][] board)
+        {
+            var min = 10;
+            var x = 0;
+            var y = 0;
+
+            for (var i = 0; i < N; i++)
+                for (var j = 0; j < N; j++)
+                {
+                    if (board[i][j] == '.')
+                    {
+                        var slot = slots[Get(i, j)];
+                        if (slot < min)
+                        {
+                            min = slot;
+                            x = i;
+                            y = j;
+                        }
+                        if (min == 1)
+                            return (x, y);
+                    }
+                }
+            return (x, y);
+        }
+
+        int Get(int i, int j)
+        {
+            return row[i] & col[j] & cel[i / 3, j / 3];
+        }
+
+        void Update(char[][] board, int i, int j, int t, bool isSet)
+        {
+            if (isSet)
+            {
+                board[i][j] = (char)(t + '1');
+            }
+            else
+            {
+                board[i][j] = '.';
+            }
+            var v = 1 << t;
+            if (!isSet) v = -v;
+            row[i] -= v;
+            col[j] -= v;
+            cel[i / 3, j / 3] -= v;
+        }
+
+        void Init()
+        {
+            for (var i = 0; i < M; i++)
+                for (var j = 0; j < N; j++)
+                    slots[i] += (i >> j) & 1;
+            for (var i = 0; i < N; i++)
+                row[i] = col[i] = (1 << N) - 1;
+            for (var i = 0; i < 3; i++)
+                for (var j = 0; j < 3; j++)
+                    cel[i, j] = (1 << N) - 1;
+        }
+
+        public void SolveSudoku2(char[][] board)
         {
             if (board == null || board.Length == 0)
             {
