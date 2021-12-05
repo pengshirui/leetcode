@@ -1,4 +1,4 @@
-﻿namespace LeetCode.DFS.PrintTree
+﻿namespace LeetCode.Tree.PrintTree
 {
     using LeetCode.DataStructures;
     using System;
