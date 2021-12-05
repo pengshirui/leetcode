@@ -27,7 +27,7 @@
             (int, int, double, double)[] graph =
             {
                 (0, 1, 10, 9.8),
-                (1, 2, 1, 1.8)
+                (1, 2, 1, 0.8)
             };
 
             Solution.CurrencyConvert(3, graph, 1, 0, 1).Should().Be(9.8);
@@ -88,12 +88,10 @@
         {
             (int, int, double, double)[] graph =
             {
-                (0, 1, 5, 4.8),
-                (1, 2, 2, 1.8),
                 (0, 2, 8, 7),
             };
 
-            Solution.CurrencyConvert(3, graph, 0, 2, 10).Should().Be(1.25);
+            Solution.CurrencyConvert(4, graph, 1, 2, 10).Should().Be(-1);
         }
 
         [TestMethod]
@@ -102,11 +100,22 @@
             (int, int, double, double)[] graph =
             {
                 (0, 1, 5, 4.8),
-                (1, 2, 2, 1.8),
-                (0, 2, 8, 7),
+                (0, 2, 2, 1.8),
+                (0, 3, 8, 7),
             };
 
-            Solution.CurrencyConvert(3, graph, 2, 0, 1).Should().Be(8.64);
+            Solution.CurrencyConvert(4, graph, 1, 2, 1).Should().Be(2.4);
+        }
+
+        [TestMethod]
+        public void Test9()
+        {
+            (int, int, double, double)[] graph =
+            {
+                (0, 1, 1, 10)
+            };
+
+            Solution.CurrencyConvert(3, graph, 0, 1, 1).Should().Be(-1);
         }
     }
 }

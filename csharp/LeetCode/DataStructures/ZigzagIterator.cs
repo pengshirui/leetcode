@@ -12,21 +12,13 @@
         int tt = -1;
         public ZigzagIterator(IList<int> v1, IList<int> v2)
         {
-            n = v1.Count + v2.Count;
-            var i = 0;
-            var count = Math.Min(v1.Count, v2.Count);
-            for (; i < count; i++)
+            n = Math.Max(v1.Count, v2.Count);
+            for (var i = 0; i < n; i++)
             {
-                q[++tt] = v1[i];
-                q[++tt] = v2[i];
-            }
-            while (i < v1.Count)
-            {
-                q[++tt] = v1[i++];
-            }
-            while (i < v2.Count)
-            {
-                q[++tt] = v2[i++];
+                if (i < v1.Count)
+                    q[++tt] = v1[i]; 
+                if (i < v2.Count)
+                    q[++tt] = v2[i];
             }
         }
 
