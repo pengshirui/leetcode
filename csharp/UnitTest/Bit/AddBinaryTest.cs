@@ -1,7 +1,7 @@
-﻿namespace UnitTest.Easy
+﻿namespace UnitTest.Bit
 {
     using FluentAssertions;
-    using LeetCode.Easy;
+    using LeetCode.Bit.AddBinary;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]

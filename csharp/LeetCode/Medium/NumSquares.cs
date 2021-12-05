@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace LeetCode.Medium.NumSquares
+﻿namespace LeetCode.Medium.NumSquares
 {
+    using System;
+
     public class Solution
     {
         public int NumSquares(int n)

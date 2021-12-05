@@ -36,7 +36,7 @@
 
         static void Main(String[] args)
         {
-            
+            var sb = new StringBuilder();
         }
     }
 
