@@ -23,7 +23,7 @@
                 new int[]{1,1,1,1,0,0,0,0},
                 new int[]{1,1,1,1,0,0,0,0},
             };
-            var r = Solution.Construct(b).Should();
+            var r = Solution.Construct(b);
         }
     }
 }
