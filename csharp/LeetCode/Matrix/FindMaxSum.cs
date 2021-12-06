@@ -9,21 +9,6 @@
             var res = new int[3];
             var m = matrix.Length;
             var n = matrix[0].Length;
-            var sum = 0;
-            for (var i = k; i < m - k; i++)
-                for (var j = k; j < n - k; j++)
-                {
-                    sum = GetSum(matrix, i, j, k);
-                    Add(res, sum);
-                }
-            return res;
-        }
-
-        public int[] FindMaxSum2(int[][] matrix, int k)
-        {
-            var res = new int[3];
-            var m = matrix.Length;
-            var n = matrix[0].Length;
             for (var i = k; i < m - k; i++)
                 for (var j = k; j < n - k; j++)
                 {

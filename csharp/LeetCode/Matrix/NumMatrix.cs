@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Medium
+﻿namespace LeetCode.Matrix.NumMatrix
 {
     public class NumMatrix
     {

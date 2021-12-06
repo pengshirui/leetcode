@@ -1,7 +1,7 @@
-﻿namespace UnitTest.Medium
+﻿namespace UnitTest.Matrix
 {
     using FluentAssertions;
-    using LeetCode.Medium;
+    using LeetCode.Matrix.NumMatrix;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
